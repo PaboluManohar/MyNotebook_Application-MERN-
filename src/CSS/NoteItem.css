@@ -1,0 +1,104 @@
+
+
+/* Title styling with truncation for long text */
+.card-title {
+    color: #333333; /* Dark grey for title */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1; /* Allow title to grow and take space */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long titles with an ellipsis */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Icon styling */
+.far.fa-trash-alt, .far.fa-edit {
+    color: #333333; /* Dark grey for icons */
+    cursor: pointer;
+    margin-left: 10px; /* Add some space between icons */
+    transition: color 0.25s;
+    flex-shrink: 0; /* Prevent icons from shrinking */
+}
+
+.far.fa-trash-alt:hover {
+    color: #FF6347; /* Change color on hover */
+}
+.far.fa-edit:hover{
+    color: rgb(0, 0, 255);
+}
+.far.fa-eye:hover{
+    color: green;
+}
+
+
+/* Card text styling */
+.card-text {
+    color: rgb(188, 151, 49); /* Medium grey for text */
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+}
+
+.card {
+    background-color: #fffbf1;
+    height: 150px; /* Fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure space is distributed evenly */
+    border: 1px solid rgb(255, 179, 28);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    padding: 15px; /* Padding around the content */
+    flex-grow: 1; /* Allow the card body to take up available space */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduced margin below title */
+    white-space: nowrap;  /* Prevent wrapping */
+    overflow: hidden;     /* Hide overflowing text */
+    text-overflow: ellipsis;  /* Add ellipsis if text is too long */
+}
+
+.card-text {
+    flex-grow: 1;  /* Allow the description to take up the remaining space */
+    overflow-y: auto;   /* Allow vertical scrolling if necessary */
+    max-height: 80px;   /* Set a maximum height for the description */
+    margin: 0; /* Remove default margin to eliminate extra space */
+}
+
+.d-flex.align-items-center {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Added space for icons */
+}
+
+.d-flex.align-items-center i {
+    margin-left: 10px; /* Space between icons */
+}
+
+.card-footer {
+    text-align: right; /* Align footer text to the right */
+    margin-top: auto; /* Align footer to the bottom */
+}
+
+
+
+.modelb{
+    border: 2px solid rgb(255, 179, 28);
+    border-radius: 10px;
+    color: rgb(188, 151, 49); /* Medium grey for text */
+    font-size: 16px;
+    margin: 5px;
+    font-weight: 500;
+    background-color: #fffbf1;
+    text-align: justify;}

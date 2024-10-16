@@ -33,6 +33,8 @@ export default function AddNote() {
                             aria-describedby="emailHelp"
                             onChange={onChange}
                             value={note.title} // Controlled input
+                            minLength={5}
+                            required
                         />
                     </div>
                     <div className="mb-3">
@@ -44,6 +46,8 @@ export default function AddNote() {
                             id="desc"
                             onChange={onChange}
                             value={note.description} // Controlled input
+                            minLength={5}
+                            required
                         />
                     </div>
                     <div className="mb-3">
@@ -57,7 +61,7 @@ export default function AddNote() {
                             value={note.tag} // Controlled input
                         />
                     </div>
-                    <button type="submit" onClick={handleClick} className="btn btn-primary">Submit</button>
+                    <button disabled={note.title.length <5 || note.description.length <5 } type="submit" onClick={handleClick} className="btn btn-primary">Save Note</button>
                 </form>
             </div>
         </div>
