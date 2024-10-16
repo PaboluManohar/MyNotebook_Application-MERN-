@@ -1,16 +1,20 @@
 import React, { useState, useContext } from 'react';
 import NoteCon from '../context/notes/noteContext';
+import alertContext from '../context/alert/alertContext';
 
 export default function AddNote() {
     const context = useContext(NoteCon);
+    const alertcon = useContext(alertContext);
+    const {makeAlert} =alertcon;
+
     // const { addNote } = context;
     const [note, setNote] = useState({ title: "", description: "", tag: "" });
-
     const handleClick = (e) => {
         e.preventDefault(); // Prevent page refresh
         context.addNote(note.title, note.description, note.tag);
         // Optionally reset the note after adding
         setNote({ title: "", description: "", tag: "" });
+        makeAlert("note added successfully","success");
 
     };
 
@@ -20,9 +24,9 @@ export default function AddNote() {
 
     return (
         <div>
-            <div className="container my-3">
+            <div  className="container my-1">
                 <h2>Add a Note</h2>
-                <form className="my-3">
+                <form className="nn">
                     <div className="mb-3">
                         <label htmlFor="title" className="form-label">Title</label>
                         <input
